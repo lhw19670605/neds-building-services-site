@@ -1,0 +1,573 @@
+{
+  "projects": [
+    {
+      "slug": "65-building",
+      "title": "65 Building",
+      "location": "65 Seward Ave, Middletown, NY",
+      "date": "2023",
+      "projectType": "Renovation",
+      "scope": "The entire building underwent layout adjustments, room partitioning, and all related work including electrical, plumbing, painting, roofing, and air conditioning.",
+      "status": "In Progress",
+      "buildingArea": "41,826 SF",
+      "client": "",
+      "notes": "",
+      "summary": "A multi-room refresh with documented progress.",
+      "tags": [
+        "Renovation"
+      ],
+      "coverThumb": "/generated/65-building/renderings/thumb/Music-Transition.jpg",
+      "sortKey": "2023",
+      "phases": {
+        "renderings": {
+          "images": [
+            {
+              "srcThumb": "/generated/65-building/renderings/thumb/Music-Transition.jpg",
+              "srcLarge": "/generated/65-building/renderings/large/Music-Transition.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/65-building/renderings/thumb/Music.jpg",
+              "srcLarge": "/generated/65-building/renderings/large/Music.jpg",
+              "alt": ""
+            }
+          ],
+          "videos": []
+        },
+        "before": {
+          "images": [],
+          "videos": []
+        },
+        "during": {
+          "images": [
+            {
+              "srcThumb": "/generated/65-building/during/thumb/20191019_141054.jpg",
+              "srcLarge": "/generated/65-building/during/large/20191019_141054.jpg",
+              "alt": ""
+            }
+          ],
+          "videos": []
+        },
+        "after": {
+          "images": [],
+          "videos": []
+        }
+      }
+    },
+    {
+      "slug": "84-building",
+      "title": "84 Building",
+      "location": "84 DORTHEA DIX DR, Middletown, NY",
+      "date": "2022",
+      "projectType": "Renovation",
+      "scope": "The entire building underwent layout adjustments, room partitioning, and all related work including electrical, plumbing, painting, roofing, and air conditioning.",
+      "status": "Completed",
+      "buildingArea": "93,980 SF",
+      "client": "",
+      "notes": "",
+      "summary": "Before → During → After gallery for the auditorium lobby.",
+      "tags": [
+        "Renovation",
+        "Accessibility"
+      ],
+      "coverThumb": "/generated/84-building/renderings/thumb/Dorm-Transition.jpg",
+      "sortKey": "2022",
+      "phases": {
+        "renderings": {
+          "images": [
+            {
+              "srcThumb": "/generated/84-building/renderings/thumb/Dorm-Transition.jpg",
+              "srcLarge": "/generated/84-building/renderings/large/Dorm-Transition.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/84-building/renderings/thumb/Dorm-entrance.jpg",
+              "srcLarge": "/generated/84-building/renderings/large/Dorm-entrance.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/84-building/renderings/thumb/Dorm-night.jpg",
+              "srcLarge": "/generated/84-building/renderings/large/Dorm-night.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/84-building/renderings/thumb/Dorm-road.jpg",
+              "srcLarge": "/generated/84-building/renderings/large/Dorm-road.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/84-building/renderings/thumb/Dorm.jpg",
+              "srcLarge": "/generated/84-building/renderings/large/Dorm.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/84-building/renderings/thumb/dorm-mall.jpg",
+              "srcLarge": "/generated/84-building/renderings/large/dorm-mall.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/84-building/renderings/thumb/dorm-wide.jpg",
+              "srcLarge": "/generated/84-building/renderings/large/dorm-wide.jpg",
+              "alt": ""
+            }
+          ],
+          "videos": []
+        },
+        "before": {
+          "images": [
+            {
+              "srcThumb": "/generated/84-building/before/thumb/2017-02-04-2.jpg",
+              "srcLarge": "/generated/84-building/before/large/2017-02-04-2.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/84-building/before/thumb/2017-02-04-3.jpg",
+              "srcLarge": "/generated/84-building/before/large/2017-02-04-3.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/84-building/before/thumb/2017-02-04-4.jpg",
+              "srcLarge": "/generated/84-building/before/large/2017-02-04-4.jpg",
+              "alt": ""
+            }
+          ],
+          "videos": []
+        },
+        "during": {
+          "images": [
+            {
+              "srcThumb": "/generated/84-building/during/thumb/20191019_141348.jpg",
+              "srcLarge": "/generated/84-building/during/large/20191019_141348.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/84-building/during/thumb/20191019_141523.jpg",
+              "srcLarge": "/generated/84-building/during/large/20191019_141523.jpg",
+              "alt": ""
+            }
+          ],
+          "videos": []
+        },
+        "after": {
+          "images": [],
+          "videos": []
+        }
+      }
+    },
+    {
+      "slug": "a-building",
+      "title": "A Building",
+      "location": "42 JASON PLACE, Middletown, NY",
+      "date": "2017",
+      "projectType": "Renovation",
+      "scope": "The entire building underwent layout adjustments, room partitioning, and all related work including electrical, plumbing, painting, roofing, and air conditioning.",
+      "status": "Completed",
+      "buildingArea": "5,124 SF",
+      "client": "",
+      "notes": "",
+      "summary": "A multi-room refresh with documented progress.",
+      "tags": [
+        "Renovation"
+      ],
+      "coverThumb": "/generated/a-building/after/thumb/20170601-IMG_0779.jpg",
+      "sortKey": "2017",
+      "phases": {
+        "renderings": {
+          "images": [],
+          "videos": []
+        },
+        "before": {
+          "images": [],
+          "videos": []
+        },
+        "during": {
+          "images": [],
+          "videos": []
+        },
+        "after": {
+          "images": [
+            {
+              "srcThumb": "/generated/a-building/after/thumb/20170601-IMG_0779.jpg",
+              "srcLarge": "/generated/a-building/after/large/20170601-IMG_0779.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/a-building/after/thumb/20170601-IMG_0780.jpg",
+              "srcLarge": "/generated/a-building/after/large/20170601-IMG_0780.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/a-building/after/thumb/20170601-IMG_0785.jpg",
+              "srcLarge": "/generated/a-building/after/large/20170601-IMG_0785.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/a-building/after/thumb/20170601-IMG_0786.jpg",
+              "srcLarge": "/generated/a-building/after/large/20170601-IMG_0786.jpg",
+              "alt": ""
+            }
+          ],
+          "videos": []
+        }
+      }
+    },
+    {
+      "slug": "b-building",
+      "title": "B Building",
+      "location": "49 SEWARD AVE, Middletown, NY",
+      "date": "2020",
+      "projectType": "Renovation",
+      "scope": "The entire building underwent layout adjustments, room partitioning, and all related work including electrical, plumbing, painting, roofing, and air conditioning.",
+      "status": "Completed",
+      "buildingArea": "22,408 SF",
+      "client": "",
+      "notes": "",
+      "summary": "Walkway repairs to improve safety and drainage.",
+      "tags": [
+        "Renovation"
+      ],
+      "coverThumb": "/generated/b-building/after/thumb/Exit-unplowed.jpg",
+      "sortKey": "2020",
+      "phases": {
+        "renderings": {
+          "images": [],
+          "videos": []
+        },
+        "before": {
+          "images": [],
+          "videos": []
+        },
+        "during": {
+          "images": [],
+          "videos": []
+        },
+        "after": {
+          "images": [
+            {
+              "srcThumb": "/generated/b-building/after/thumb/Exit-unplowed.jpg",
+              "srcLarge": "/generated/b-building/after/large/Exit-unplowed.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/b-building/after/thumb/IMG_20170106_081128_kitchen.jpg",
+              "srcLarge": "/generated/b-building/after/large/IMG_20170106_081128_kitchen.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/b-building/after/thumb/IMG_20170106_161637.jpg",
+              "srcLarge": "/generated/b-building/after/large/IMG_20170106_161637.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/b-building/after/thumb/IMG_20170106_161818.jpg",
+              "srcLarge": "/generated/b-building/after/large/IMG_20170106_161818.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/b-building/after/thumb/IMG_20170106_180755.jpg",
+              "srcLarge": "/generated/b-building/after/large/IMG_20170106_180755.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/b-building/after/thumb/IMG_20170107_134349.jpg",
+              "srcLarge": "/generated/b-building/after/large/IMG_20170107_134349.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/b-building/after/thumb/IMG_20170107_134753.jpg",
+              "srcLarge": "/generated/b-building/after/large/IMG_20170107_134753.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/b-building/after/thumb/IMG_20170107_135533.jpg",
+              "srcLarge": "/generated/b-building/after/large/IMG_20170107_135533.jpg",
+              "alt": ""
+            }
+          ],
+          "videos": []
+        }
+      }
+    },
+    {
+      "slug": "c-building",
+      "title": "C Building",
+      "location": "1 ASHLEY AVE, Middletown, NY",
+      "date": "2019",
+      "projectType": "Renovation",
+      "scope": "The entire building underwent layout adjustments, room partitioning, and all related work including electrical, plumbing, painting, roofing, and air conditioning.",
+      "status": "Completed",
+      "buildingArea": "18,015 SF",
+      "client": "",
+      "notes": "",
+      "summary": "A multi-room refresh with documented progress.",
+      "tags": [
+        "Renovation"
+      ],
+      "coverThumb": "/generated/c-building/renderings/thumb/Silver-building-1.jpg",
+      "sortKey": "2019",
+      "phases": {
+        "renderings": {
+          "images": [
+            {
+              "srcThumb": "/generated/c-building/renderings/thumb/Silver-building-1.jpg",
+              "srcLarge": "/generated/c-building/renderings/large/Silver-building-1.jpg",
+              "alt": ""
+            }
+          ],
+          "videos": []
+        },
+        "before": {
+          "images": [
+            {
+              "srcThumb": "/generated/c-building/before/thumb/IMG_20170223_150824.jpg",
+              "srcLarge": "/generated/c-building/before/large/IMG_20170223_150824.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/c-building/before/thumb/IMG_20170223_151612.jpg",
+              "srcLarge": "/generated/c-building/before/large/IMG_20170223_151612.jpg",
+              "alt": ""
+            }
+          ],
+          "videos": []
+        },
+        "during": {
+          "images": [
+            {
+              "srcThumb": "/generated/c-building/during/thumb/1Ashley_LabSpace01.jpg",
+              "srcLarge": "/generated/c-building/during/large/1Ashley_LabSpace01.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/c-building/during/thumb/IMG_20170421_151121.jpg",
+              "srcLarge": "/generated/c-building/during/large/IMG_20170421_151121.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/c-building/during/thumb/IMG_20170421_151131.jpg",
+              "srcLarge": "/generated/c-building/during/large/IMG_20170421_151131.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/c-building/during/thumb/IMG_20170421_151200.jpg",
+              "srcLarge": "/generated/c-building/during/large/IMG_20170421_151200.jpg",
+              "alt": ""
+            }
+          ],
+          "videos": []
+        },
+        "after": {
+          "images": [
+            {
+              "srcThumb": "/generated/c-building/after/thumb/20180413_141401.jpg",
+              "srcLarge": "/generated/c-building/after/large/20180413_141401.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/c-building/after/thumb/20180413_191246.jpg",
+              "srcLarge": "/generated/c-building/after/large/20180413_191246.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/c-building/after/thumb/20180413_194710.jpg",
+              "srcLarge": "/generated/c-building/after/large/20180413_194710.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/c-building/after/thumb/20180413_195001.jpg",
+              "srcLarge": "/generated/c-building/after/large/20180413_195001.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/c-building/after/thumb/20180413_195424.jpg",
+              "srcLarge": "/generated/c-building/after/large/20180413_195424.jpg",
+              "alt": ""
+            }
+          ],
+          "videos": []
+        }
+      }
+    },
+    {
+      "slug": "cliner-building",
+      "title": "Clinical Building",
+      "location": "Middletown, NY",
+      "date": "2023",
+      "projectType": "Interior",
+      "scope": "FThe entire building underwent layout adjustments, room partitioning, and all related work including electrical, plumbing, painting, roofing, and air conditioning.",
+      "status": "Special",
+      "buildingArea": "",
+      "client": "",
+      "notes": "",
+      "summary": "A multi-room refresh with documented progress.",
+      "tags": [
+        "Interior"
+      ],
+      "coverThumb": "/generated/cliner-building/before/thumb/EP-151109469.jpg",
+      "sortKey": "2023",
+      "phases": {
+        "renderings": {
+          "images": [],
+          "videos": []
+        },
+        "before": {
+          "images": [
+            {
+              "srcThumb": "/generated/cliner-building/before/thumb/EP-151109469.jpg",
+              "srcLarge": "/generated/cliner-building/before/large/EP-151109469.jpg",
+              "alt": ""
+            }
+          ],
+          "videos": []
+        },
+        "during": {
+          "images": [],
+          "videos": []
+        },
+        "after": {
+          "images": [],
+          "videos": []
+        }
+      }
+    },
+    {
+      "slug": "d-building",
+      "title": "D Building",
+      "location": "14 JASON PLACE, Middletown, NY",
+      "date": "2018",
+      "projectType": "Renovation",
+      "scope": "The entire building underwent layout adjustments, room partitioning, and all related work including electrical, plumbing, painting, roofing, and air conditioning.",
+      "status": "Completed",
+      "buildingArea": "87,338 SF",
+      "client": "",
+      "notes": "",
+      "summary": "A multi-room refresh with documented progress.",
+      "tags": [
+        "Renovation"
+      ],
+      "coverThumb": "/generated/d-building/renderings/thumb/B3_Front_Elevation_20170314a.jpg",
+      "sortKey": "2018",
+      "phases": {
+        "renderings": {
+          "images": [
+            {
+              "srcThumb": "/generated/d-building/renderings/thumb/B3_Front_Elevation_20170314a.jpg",
+              "srcLarge": "/generated/d-building/renderings/large/B3_Front_Elevation_20170314a.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/d-building/renderings/thumb/B3_Front_LeftSide_20170314b.jpg",
+              "srcLarge": "/generated/d-building/renderings/large/B3_Front_LeftSide_20170314b.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/d-building/renderings/thumb/FTC_Paintings_24x36_MountedLaminated.jpg",
+              "srcLarge": "/generated/d-building/renderings/large/FTC_Paintings_24x36_MountedLaminated.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/d-building/renderings/thumb/Medical-Center.jpg",
+              "srcLarge": "/generated/d-building/renderings/large/Medical-Center.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/d-building/renderings/thumb/Woodman-Hall-Painting.jpg",
+              "srcLarge": "/generated/d-building/renderings/large/Woodman-Hall-Painting.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/d-building/renderings/thumb/Woodman-Hall-Transition.jpg",
+              "srcLarge": "/generated/d-building/renderings/large/Woodman-Hall-Transition.jpg",
+              "alt": ""
+            }
+          ],
+          "videos": []
+        },
+        "before": {
+          "images": [
+            {
+              "srcThumb": "/generated/d-building/before/thumb/14JasonPlace_Prior1.jpg",
+              "srcLarge": "/generated/d-building/before/large/14JasonPlace_Prior1.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/d-building/before/thumb/20141116_115949.jpg",
+              "srcLarge": "/generated/d-building/before/large/20141116_115949.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/d-building/before/thumb/B3_Staircase_Color.jpg",
+              "srcLarge": "/generated/d-building/before/large/B3_Staircase_Color.jpg",
+              "alt": ""
+            }
+          ],
+          "videos": []
+        },
+        "during": {
+          "images": [
+            {
+              "srcThumb": "/generated/d-building/during/thumb/14Jason_Interior_IMG_0067.jpg",
+              "srcLarge": "/generated/d-building/during/large/14Jason_Interior_IMG_0067.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/d-building/during/thumb/20180706_171000.jpg",
+              "srcLarge": "/generated/d-building/during/large/20180706_171000.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/d-building/during/thumb/20180706_172646.jpg",
+              "srcLarge": "/generated/d-building/during/large/20180706_172646.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/d-building/during/thumb/20180707_173431.jpg",
+              "srcLarge": "/generated/d-building/during/large/20180707_173431.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/d-building/during/thumb/20180707_173502.jpg",
+              "srcLarge": "/generated/d-building/during/large/20180707_173502.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/d-building/during/thumb/20180710_164009.jpg",
+              "srcLarge": "/generated/d-building/during/large/20180710_164009.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/d-building/during/thumb/20180727_161236.jpg",
+              "srcLarge": "/generated/d-building/during/large/20180727_161236.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/d-building/during/thumb/20180727_161354.jpg",
+              "srcLarge": "/generated/d-building/during/large/20180727_161354.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/d-building/during/thumb/20180727_161412.jpg",
+              "srcLarge": "/generated/d-building/during/large/20180727_161412.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/d-building/during/thumb/20180816_095523.jpg",
+              "srcLarge": "/generated/d-building/during/large/20180816_095523.jpg",
+              "alt": ""
+            }
+          ],
+          "videos": []
+        },
+        "after": {
+          "images": [
+            {
+              "srcThumb": "/generated/d-building/after/thumb/20141116_120155.jpg",
+              "srcLarge": "/generated/d-building/after/large/20141116_120155.jpg",
+              "alt": ""
+            }
+          ],
+          "videos": []
+        }
+      }
+    }
+  ]
+}
