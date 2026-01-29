@@ -39,6 +39,12 @@ python3 tools/build.py
 
 ```bash
 python3 tools/build.py
+
+在站点根目录（和 index.html 同级）运行：
+python3 -m http.server 8000
+
+然后用浏览器打开：
+	http://localhost:8000/
 ```
 
 5. `git add . && git commit -m "Add project" && git push`

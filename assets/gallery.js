@@ -1,5 +1,37 @@
 import { createLightbox } from "./lightbox.js";
 
+/* ------------------------------
+   Base path helper for GitHub Pages
+   - Works for: https://<user>.github.io/<repo>/...
+   - Works for: http://localhost:8000/...
+   - Avoid file:// (fetch + root paths will break)
+--------------------------------- */
+const BASE_PATH = (() => {
+  const host = window.location.hostname || "";
+  const isGitHubIO = host.endsWith("github.io");
+  if (!isGitHubIO) return "";
+  const parts = window.location.pathname.split("/").filter(Boolean);
+  // For project pages: first segment is repo name
+  return parts.length ? `/${parts[0]}` : "";
+})();
+
+function withBase(url) {
+  if (!url) return "";
+  const u = String(url);
+
+  // external url
+  if (/^https?:\/\//i.test(u)) return u;
+
+  // already has base
+  if (BASE_PATH && u.startsWith(BASE_PATH + "/")) return u;
+
+  // root-absolute (/generated/..., /projects/...)
+  if (u.startsWith("/")) return BASE_PATH + u;
+
+  // relative (generated/..., projects/...)
+  return BASE_PATH + "/" + u.replace(/^\.\//, "");
+}
+
 function safeText(v) {
   return (v ?? "").toString().trim();
 }
@@ -44,7 +76,7 @@ function buildProjectCard(p) {
 
   // Cover image → media(all)
   const coverLink = document.createElement("a");
-  coverLink.href = mediaUrl;
+  coverLink.href = withBase(mediaUrl);
   coverLink.style.display = "block";
   coverLink.style.position = "relative"; // for flag positioning
 
@@ -52,7 +84,7 @@ function buildProjectCard(p) {
   img.className = "project-thumb";
   img.loading = "lazy";
   img.alt = p.title || p.slug;
-  img.src = p.coverThumb || "";
+  img.src = withBase(p.coverThumb || "");
   coverLink.appendChild(img);
 
   // status flag on cover
@@ -74,14 +106,14 @@ function buildProjectCard(p) {
 
   // Title → overview
   const titleLink = document.createElement("a");
-  titleLink.href = overviewUrl;
+  titleLink.href = withBase(overviewUrl);
   titleLink.className = "title title-link";
   titleLink.textContent = p.title || p.slug;
 
   // Detail button → media(all)
   const detail = document.createElement("a");
   detail.className = "btn secondary btn-detail";
-  detail.href = mediaUrl;
+  detail.href = withBase(mediaUrl);
   detail.textContent = "Detail";
 
   row.appendChild(titleLink);
@@ -99,7 +131,9 @@ async function renderHome() {
 
   const dataUrl =
     document.body.getAttribute("data-gallery-url") || "generated/gallery.json";
-  const res = await fetch(dataUrl, { cache: "no-cache" });
+
+  // ✅ 让 gallery.json 也适配 GitHub Pages 子路径
+  const res = await fetch(withBase(dataUrl), { cache: "no-cache" });
   if (!res.ok) {
     mount.innerHTML = `<div class="card" style="padding:16px;color:var(--muted)">Failed to load ${dataUrl}</div>`;
     return;
@@ -116,7 +150,7 @@ async function renderHome() {
         className: "card",
         innerHTML:
           '<div style="padding:16px;color:var(--muted)">还没有项目。把照片放进 <code>projects/&lt;slug&gt;/before|during|after</code>，然后运行 <code>python3 tools/build.py</code> 生成索引。</div>',
-      }),
+      })
     );
     return;
   }
@@ -164,13 +198,13 @@ function renderPhase(phaseKey, phaseTitle, phase, lb) {
         iframe.allow =
           "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
         iframe.allowFullscreen = true;
-        iframe.src = v.url;
+        iframe.src = v.url; // embed 本身是外链，不需要 withBase
         card.appendChild(iframe);
       } else if (v.kind === "file" && v.url) {
         const video = document.createElement("video");
         video.controls = true;
         video.preload = "metadata";
-        video.src = v.url;
+        video.src = withBase(v.url);
         card.appendChild(video);
       }
       vw.appendChild(card);
@@ -181,15 +215,24 @@ function renderPhase(phaseKey, phaseTitle, phase, lb) {
   if (images.length) {
     const grid = document.createElement("div");
     grid.className = "thumb-grid";
-    images.forEach((img, i) => {
+
+    // ✅ 预处理一份带 base 的 images，给 lightbox 用
+    const fixedImages = images.map((x) => ({
+      ...x,
+      srcThumb: withBase(x.srcThumb),
+      srcLarge: withBase(x.srcLarge),
+    }));
+
+    fixedImages.forEach((img, i) => {
       const t = document.createElement("img");
       t.className = "thumb";
       t.loading = "lazy";
       t.src = img.srcThumb;
       t.alt = img.alt || "";
-      t.addEventListener("click", () => lb.open(images, i));
+      t.addEventListener("click", () => lb.open(fixedImages, i));
       grid.appendChild(t);
     });
+
     wrap.appendChild(grid);
   }
 
@@ -202,7 +245,8 @@ async function renderProject() {
 
   const slug = document.body.getAttribute("data-project-slug");
   const dataUrl = document.body.getAttribute("data-gallery-url");
-  const res = await fetch(dataUrl, { cache: "no-cache" });
+
+  const res = await fetch(withBase(dataUrl), { cache: "no-cache" });
   if (!res.ok) {
     mount.innerHTML = `<div class="card" style="padding:16px;color:var(--muted)">Failed to load ${dataUrl}</div>`;
     return;
@@ -235,7 +279,6 @@ async function renderProject() {
   }
 
   const subtitle = document.querySelector("#projectSubtitle");
-  //subtitle.textContent = p.summary || "";
   if (subtitle) {
     subtitle.textContent = "";
     subtitle.style.display = "none";
@@ -253,7 +296,7 @@ async function renderProject() {
     ["Date", safeText(p.date)],
     ["Project Type", safeText(p.projectType)],
     ["Scope", safeText(p.scope)],
-    ["Summary", safeText(p.summary)], // ✅ 新增
+    ["Summary", safeText(p.summary)],
     ["Notes", safeText(p.notes)],
     ["Client", safeText(p.client)],
     ["Status", safeText(p.status)],
@@ -267,18 +310,6 @@ async function renderProject() {
     infoList.appendChild(buildInfoItem("Info", "No details provided yet."));
   }
 
-  // Right: summary/notes card (optional)
-  /*if (p.summary || p.scope || p.notes) {
-    const card = document.createElement("div");
-    card.className = "card info-card";
-    card.innerHTML = `
-      <h2 style="margin:0 0 10px">Overview</h2>
-      <p style="margin:0;color:var(--muted)">${safeText(p.summary || p.scope)}</p>
-      ${p.notes ? `<p style="margin:10px 0 0;color:var(--muted)">${safeText(p.notes)}</p>` : ""}
-    `;
-    overviewWrap.appendChild(card);
-  }*/
-
   // Lightbox
   const lb = createLightbox();
 
@@ -289,14 +320,14 @@ async function renderProject() {
     "renderings",
     "Renderings",
     p.phases?.renderings,
-    lb,
+    lb
   );
   const secBefore = renderPhase("before", "Before", p.phases?.before, lb);
   const secDuring = renderPhase("during", "During", p.phases?.during, lb);
   const secAfter = renderPhase("after", "After", p.phases?.after, lb);
 
   const sections = [secRenderings, secBefore, secDuring, secAfter].filter(
-    Boolean,
+    Boolean
   );
   if (!sections.length) {
     gs.appendChild(
@@ -304,7 +335,7 @@ async function renderProject() {
         className: "card",
         innerHTML:
           '<div style="padding:16px;color:var(--muted)">这个项目还没有媒体内容。把照片放进该项目的 before/during/after 文件夹后再运行构建脚本即可。</div>',
-      }),
+      })
     );
   } else {
     sections.forEach((s) => gs.appendChild(s));
@@ -342,7 +373,6 @@ async function renderProject() {
   }
 
   function showMediaAll(on) {
-    // show all phases if on, otherwise handled per phase
     document
       .querySelectorAll("#gallerySections .gallery-section")
       .forEach((sec) => {
@@ -364,14 +394,12 @@ async function renderProject() {
     if (tab === "overview") {
       showOverview(true);
       showMediaAll(false);
-      // hide all media
       document
         .querySelectorAll("#gallerySections .gallery-section")
         .forEach((sec) => sec.classList.add("hidden"));
       return;
     }
 
-    // media tabs
     showOverview(false);
 
     if (tab === "all") {
@@ -418,10 +446,8 @@ async function renderProject() {
     defaultTab = "all";
   else if (available.has(want)) defaultTab = want;
 
-  // If media exists but overview doesn't, default to all
   if (!available.has(defaultTab) && available.has("all")) defaultTab = "all";
 
-  // Initialize: hide overview block if not chosen
   switchTab(defaultTab);
 }
 
