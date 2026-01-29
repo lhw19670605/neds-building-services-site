@@ -1,35 +1,61 @@
 import { createLightbox } from "./lightbox.js";
 
-/* ------------------------------
-   Base path helper for GitHub Pages
-   - Works for: https://<user>.github.io/<repo>/...
-   - Works for: http://localhost:8000/...
-   - Avoid file:// (fetch + root paths will break)
---------------------------------- */
-const BASE_PATH = (() => {
-  const host = window.location.hostname || "";
-  const isGitHubIO = host.endsWith("github.io");
-  if (!isGitHubIO) return "";
-  const parts = window.location.pathname.split("/").filter(Boolean);
-  // For project pages: first segment is repo name
-  return parts.length ? `/${parts[0]}` : "";
-})();
 
-function withBase(url) {
-  if (!url) return "";
-  const u = String(url);
+/* ------------------------------
+   Robust base/path helper
+   - Works for GitHub Pages project site: https://<user>.github.io/<repo>/...
+   - Works for local server: http://localhost:8000/...
+   - Handles ../ and ./ correctly (no string concat)
+--------------------------------- */
+const IS_GH = window.location.hostname.endsWith("github.io");
+const REPO = IS_GH ? window.location.pathname.split("/").filter(Boolean)[0] : "";
+
+/**
+ * Convert any url/path used in this site to a correct path under:
+ * - GitHub Pages: /<repo>/...
+ * - Local: /...
+ *
+ * Accepts:
+ * - "/generated/..." (root-absolute in repo)
+ * - "generated/..."  (site-root style)
+ * - "../../generated/..." (relative from project page)
+ * - external "https://..."
+ */
+function withBase(input) {
+  if (!input) return "";
+  const u = String(input).trim();
+  if (!u) return "";
 
   // external url
   if (/^https?:\/\//i.test(u)) return u;
 
-  // already has base
-  if (BASE_PATH && u.startsWith(BASE_PATH + "/")) return u;
+  // 1) If it starts with "/" => treat as repo-root absolute
+  //    GitHub Pages needs "/<repo>/..." prefix
+  if (u.startsWith("/")) {
+    if (IS_GH && REPO && !u.startsWith(`/${REPO}/`)) return `/${REPO}${u}`;
+    return u;
+  }
 
-  // root-absolute (/generated/..., /projects/...)
-  if (u.startsWith("/")) return BASE_PATH + u;
+  // 2) If it looks like site-root resource (generated/projects/assets)
+  //    treat as "/generated/..." under repo
+  const clean = u.replace(/^\.\//, "");
+  if (/^(generated|projects|assets)\//i.test(clean)) {
+    const path = `/${clean}`;
+    if (IS_GH && REPO) return `/${REPO}${path}`;
+    return path;
+  }
 
-  // relative (generated/..., projects/...)
-  return BASE_PATH + "/" + u.replace(/^\.\//, "");
+  // 3) Otherwise: resolve relative to current page safely (handles ../ ..)
+  //    This keeps "/<repo>/..." correctly on project pages.
+  const resolved = new URL(u, window.location.href);
+  let path = resolved.pathname;
+
+  // If somehow repo prefix got lost on GH (rare), re-add it
+  if (IS_GH && REPO && !path.startsWith(`/${REPO}/`)) {
+    path = `/${REPO}${path.startsWith("/") ? "" : "/"}${path.replace(/^\/+/, "")}`;
+  }
+
+  return path + (resolved.search || "") + (resolved.hash || "");
 }
 
 function safeText(v) {
