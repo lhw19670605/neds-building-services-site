@@ -54,106 +54,6 @@
       }
     },
     {
-      "slug": "84-building",
-      "title": "84 Building",
-      "location": "84 DORTHEA DIX DR, Middletown, NY",
-      "date": "2022",
-      "projectType": "Renovation",
-      "scope": "The entire building underwent layout adjustments, room partitioning, and all related work including electrical, plumbing, painting, roofing, and air conditioning.",
-      "status": "Completed",
-      "buildingArea": "93,980 SF",
-      "client": "",
-      "notes": "",
-      "summary": "Before → During → After gallery for the auditorium lobby.",
-      "tags": [
-        "Renovation",
-        "Accessibility"
-      ],
-      "coverThumb": "/generated/84-building/renderings/thumb/Dorm-Transition.jpg",
-      "sortKey": "2022",
-      "phases": {
-        "renderings": {
-          "images": [
-            {
-              "srcThumb": "/generated/84-building/renderings/thumb/Dorm-Transition.jpg",
-              "srcLarge": "/generated/84-building/renderings/large/Dorm-Transition.jpg",
-              "alt": ""
-            },
-            {
-              "srcThumb": "/generated/84-building/renderings/thumb/Dorm-entrance.jpg",
-              "srcLarge": "/generated/84-building/renderings/large/Dorm-entrance.jpg",
-              "alt": ""
-            },
-            {
-              "srcThumb": "/generated/84-building/renderings/thumb/Dorm-night.jpg",
-              "srcLarge": "/generated/84-building/renderings/large/Dorm-night.jpg",
-              "alt": ""
-            },
-            {
-              "srcThumb": "/generated/84-building/renderings/thumb/Dorm-road.jpg",
-              "srcLarge": "/generated/84-building/renderings/large/Dorm-road.jpg",
-              "alt": ""
-            },
-            {
-              "srcThumb": "/generated/84-building/renderings/thumb/Dorm.jpg",
-              "srcLarge": "/generated/84-building/renderings/large/Dorm.jpg",
-              "alt": ""
-            },
-            {
-              "srcThumb": "/generated/84-building/renderings/thumb/dorm-mall.jpg",
-              "srcLarge": "/generated/84-building/renderings/large/dorm-mall.jpg",
-              "alt": ""
-            },
-            {
-              "srcThumb": "/generated/84-building/renderings/thumb/dorm-wide.jpg",
-              "srcLarge": "/generated/84-building/renderings/large/dorm-wide.jpg",
-              "alt": ""
-            }
-          ],
-          "videos": []
-        },
-        "before": {
-          "images": [
-            {
-              "srcThumb": "/generated/84-building/before/thumb/2017-02-04-2.jpg",
-              "srcLarge": "/generated/84-building/before/large/2017-02-04-2.jpg",
-              "alt": ""
-            },
-            {
-              "srcThumb": "/generated/84-building/before/thumb/2017-02-04-3.jpg",
-              "srcLarge": "/generated/84-building/before/large/2017-02-04-3.jpg",
-              "alt": ""
-            },
-            {
-              "srcThumb": "/generated/84-building/before/thumb/2017-02-04-4.jpg",
-              "srcLarge": "/generated/84-building/before/large/2017-02-04-4.jpg",
-              "alt": ""
-            }
-          ],
-          "videos": []
-        },
-        "during": {
-          "images": [
-            {
-              "srcThumb": "/generated/84-building/during/thumb/20191019_141348.jpg",
-              "srcLarge": "/generated/84-building/during/large/20191019_141348.jpg",
-              "alt": ""
-            },
-            {
-              "srcThumb": "/generated/84-building/during/thumb/20191019_141523.jpg",
-              "srcLarge": "/generated/84-building/during/large/20191019_141523.jpg",
-              "alt": ""
-            }
-          ],
-          "videos": []
-        },
-        "after": {
-          "images": [],
-          "videos": []
-        }
-      }
-    },
-    {
       "slug": "a-building",
       "title": "A Building",
       "location": "42 JASON PLACE, Middletown, NY",
@@ -168,7 +68,7 @@
       "tags": [
         "Renovation"
       ],
-      "coverThumb": "/generated/a-building/after/thumb/20170601-IMG_0779.jpg",
+      "coverThumb": "/generated/a-building/after/thumb/20170601-IMG_0785.jpg",
       "sortKey": "2017",
       "phases": {
         "renderings": {
@@ -185,16 +85,6 @@
         },
         "after": {
           "images": [
-            {
-              "srcThumb": "/generated/a-building/after/thumb/20170601-IMG_0779.jpg",
-              "srcLarge": "/generated/a-building/after/large/20170601-IMG_0779.jpg",
-              "alt": ""
-            },
-            {
-              "srcThumb": "/generated/a-building/after/thumb/20170601-IMG_0780.jpg",
-              "srcLarge": "/generated/a-building/after/large/20170601-IMG_0780.jpg",
-              "alt": ""
-            },
             {
               "srcThumb": "/generated/a-building/after/thumb/20170601-IMG_0785.jpg",
               "srcLarge": "/generated/a-building/after/large/20170601-IMG_0785.jpg",
@@ -225,7 +115,7 @@
       "tags": [
         "Renovation"
       ],
-      "coverThumb": "/generated/b-building/after/thumb/Exit-unplowed.jpg",
+      "coverThumb": "/generated/b-building/after/thumb/20170601-IMG_0779.jpg",
       "sortKey": "2020",
       "phases": {
         "renderings": {
@@ -242,6 +132,16 @@
         },
         "after": {
           "images": [
+            {
+              "srcThumb": "/generated/b-building/after/thumb/20170601-IMG_0779.jpg",
+              "srcLarge": "/generated/b-building/after/large/20170601-IMG_0779.jpg",
+              "alt": ""
+            },
+            {
+              "srcThumb": "/generated/b-building/after/thumb/20170601-IMG_0780.jpg",
+              "srcLarge": "/generated/b-building/after/large/20170601-IMG_0780.jpg",
+              "alt": ""
+            },
             {
               "srcThumb": "/generated/b-building/after/thumb/Exit-unplowed.jpg",
               "srcLarge": "/generated/b-building/after/large/Exit-unplowed.jpg",
@@ -383,48 +283,6 @@
               "alt": ""
             }
           ],
-          "videos": []
-        }
-      }
-    },
-    {
-      "slug": "cliner-building",
-      "title": "Clinical Building",
-      "location": "Middletown, NY",
-      "date": "2023",
-      "projectType": "Interior",
-      "scope": "FThe entire building underwent layout adjustments, room partitioning, and all related work including electrical, plumbing, painting, roofing, and air conditioning.",
-      "status": "Special",
-      "buildingArea": "",
-      "client": "",
-      "notes": "",
-      "summary": "A multi-room refresh with documented progress.",
-      "tags": [
-        "Interior"
-      ],
-      "coverThumb": "/generated/cliner-building/before/thumb/EP-151109469.jpg",
-      "sortKey": "2023",
-      "phases": {
-        "renderings": {
-          "images": [],
-          "videos": []
-        },
-        "before": {
-          "images": [
-            {
-              "srcThumb": "/generated/cliner-building/before/thumb/EP-151109469.jpg",
-              "srcLarge": "/generated/cliner-building/before/large/EP-151109469.jpg",
-              "alt": ""
-            }
-          ],
-          "videos": []
-        },
-        "during": {
-          "images": [],
-          "videos": []
-        },
-        "after": {
-          "images": [],
           "videos": []
         }
       }
