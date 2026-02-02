@@ -3,15 +3,16 @@
 本仓库是一个“纯静态 HTML + 生成脚本”的图库网站骨架：
 
 - 首页自动读取 `generated/gallery.json` 展示项目列表
-- 每个项目页面按 **Before / During / After** 展示图片（支持视频）
+- 每个项目页面按 **Rendering / Before / During / After** 展示图片（支持视频）
 - 照片数量不限制：缩略图网格 + 懒加载 + 点击灯箱看大图
 
 ## 1) 目录结构（你主要会用到这几处）
 
 - `projects/<slug>/project.json`：项目字段（标题、地点、年份等）
-- `projects/<slug>/before|during|after/`：原始照片（放原图即可）
+- `projects/<slug>/rendering/before|during|after/`：原始照片（放原图即可）
 - `projects/<slug>/video/<phase>/`：本地视频（可选）
 - `tools/build.py`：构建脚本（自动生成缩略图 + 大图 + gallery.json + 项目页）
+- 文件夹名中有大写字母的会被忽略掉，只认小写字母的文件夹
 
 ## 2) Mac 上如何生成缩略图与索引（第一次）
 
@@ -32,6 +33,7 @@ python3 tools/build.py
 1. 新建项目文件夹：`projects/<slug>/`
 2. 复制一个 `project.json`，改字段
 3. 把照片放进：
+   - `rendering/`
    - `before/`
    - `during/`
    - `after/`
