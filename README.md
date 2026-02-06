@@ -27,6 +27,7 @@ python3 tools/build.py
 
 - `generated/gallery.json`
 - `generated/<slug>/**`（thumb/large）
+- `project/<slug>/index.html`
 
 ## 3) 以后你怎么加项目（最省事流程）
 
@@ -63,3 +64,8 @@ python3 -m http.server 8000
 ## 5) 替换联系信息
 
 `contact.html` 里把占位的 Email/Phone 替换成你的真实信息即可。
+
+## 6) 网页修改
+
+- 因为所有网页都是单独的静态网页，因此需要修改每一个网页：index.html, about.html, contact.html
+- Project显示内容的修改需要将每个project下的index.html删除，然后修改tools/下的nav-project.html和project-template.html，然后运行：python3 tools/build.py
