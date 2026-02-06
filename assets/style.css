@@ -519,3 +519,45 @@ a:hover{opacity:.96}
   border-color:#1d4ed8;
   color:#0a2350;
 }
+
+/* 整个 Logo 区域的容器 */
+.brand {
+  display: flex;
+  align-items: center; /* 图标和文字垂直居中 */
+  text-decoration: none;
+}
+
+/* 图标大小控制 */
+.brand-logo {
+  height: 40px; /* 根据你的导航栏高度调整 */
+  margin-right: 12px;
+}
+
+/* 文字容器：强制改为垂直堆叠 */
+.brand-wordmark {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.1; /* 紧凑行高，让两行字像一个整体 */
+}
+
+/* 第一行：缩写 (大、粗、醒目) */
+.brand-name {
+  font-size: 22px; 
+  font-weight: 800; /* 极粗体 */
+  color: #ffffff;  /* 假设背景是深色 */
+  letter-spacing: 1px; /* 稍微给一点间距，显得高级 */
+  display: block;
+}
+
+/* 第二行：全称 (小、细、刚好撑满或略短) */
+.brand-sub {
+  font-size: 6.4px; /* 关键点：字号要大幅缩小 */
+  font-weight: 400; /* 细体，形成对比 */
+  color: rgba(255, 255, 255, 0.8); /* 颜色稍浅，降低视觉权重 */
+  text-transform: uppercase; /* 强制大写，保持整齐 */
+  display: block;
+  /* 如果全称还是太长，可以用下面这个属性微调：
+     letter-spacing: -0.2px; 
+  */
+}
